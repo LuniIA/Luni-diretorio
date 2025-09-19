@@ -1,0 +1,94 @@
+{
+  "nome": "Studio Glow",
+  "segmento": "estetica_facial_corporal",
+  "subSegmento": "estúdio de estética integrativa",
+  "plano": "enterprise",
+  "produto": "Tratamentos faciais e corporais para realce da beleza natural",
+  "tipoNegocio": "Físico",
+  "atendimentoLocal": "Sim, atendimento no estúdio",
+  "canaisAtendimento": ["WhatsApp", "Instagram", "Telefone"],
+  "tempoMercado": "3 anos",
+  "publicoAlvo": "Mulheres entre 25 e 50 anos, que valorizam autocuidado",
+  "principaisDuvidas": [
+    "Vocês fazem limpeza de pele?",
+    "Quanto custa o combo de drenagem e massagem?",
+    "Tem horário amanhã?",
+    "Aceita cartão?",
+    "Quanto tempo dura a sessão?"
+  ],
+  "dorCliente": "Falta de tempo, dificuldade de agendar e baixa autoestima",
+  "produtosServicos": [
+    {
+      "nome": "Limpeza de pele profunda",
+      "descricao": "Higienização, esfoliação e extração com máscara calmante",
+      "preco": 120.0,
+      "tamanhos": [],
+      "cores": [],
+      "quantidade": 10
+    },
+    {
+      "nome": "Drenagem linfática corporal",
+      "descricao": "Sessão de 1 hora com foco em retenção e modelagem",
+      "preco": 140.0,
+      "tamanhos": [],
+      "cores": [],
+      "quantidade": 8
+    }
+  ],
+  "servicosComPrecoFixo": ["Combo drenagem + limpeza facial: R$230"],
+  "exibirPrecosBot": "Sim",
+  "diferencial": "Atendimento personalizado com foco em autoestima e bem-estar",
+  "focoVendas": "Agendar sessões e apresentar pacotes de autocuidado",
+  "promocoes": "10% de desconto na 1ª sessão para novas clientes",
+  "funcionamento": "Segunda a sábado, das 9h às 18h",
+  "respondeForaHorario": "Sim",
+  "pausas": "Almoço das 12h30 às 13h30",
+  "linguagem": "Empática e acolhedora",
+  "emojis": "Sim",
+  "respostasDetalhadas": "Levemente explicativas, com foco em tranquilidade",
+  "frasePadrao": "Olá, maravilhosa! Seja bem-vinda ao Studio Glow 💆‍♀️✨ Em que posso te ajudar hoje?",
+  "perguntarNomeCliente": true,
+  "coletarContato": true,
+  "infoEspecificaInicio": "Tipo de serviço que deseja agendar",
+  "usarNomeNegocio": true,
+  "nomeBot": "GlowBot",
+  "termosProibidos": ["dor", "problema", "sofrimento"],
+  "temasSensiveis": ["autoestima", "tempo", "autoimagem"],
+  "objetivoBot": "Agendar sessões de estética e tirar dúvidas de forma acolhedora",
+  "metaPersonalizada": "Transformar o atendimento em uma experiência de autocuidado",
+  "intensidadeVendas": 2,
+  "estrategiaVendas": ["confiança", "acolhimento", "qualidade percebida"],
+  "tonsPreferidos": ["tranquilo", "positivo", "cuidativo"],
+  "frasesSugestivas": ["Vamos cuidar de você com carinho hoje?", "Seu momento de beleza e relaxamento começa aqui 💖"],
+  "linkProdutos": null,
+  "jaUsouOutroBot": "Não",
+  "receberMelhorias": "Sim, pode sugerir via WhatsApp",
+  "observacoes": "Cliente valoriza linguagem leve e motivadora",
+  "referencias": ["Espaço Beleza", "GlowCare Spa"],
+  "personalizacaoExtra": "Falar com suavidade e transmitir segurança profissional nos atendimentos",
+  "prontoParaConfigurar": "Sim",
+  "nomeArquivo": "studioGlow",
+  "apresentacaoBot": {
+    "template": "servicosgraficos",
+    "nomeBot": "GráficaBot",
+    "cargoBot": "especialista",
+    "customizada": null
+  },
+  "tipoAgendamento": "googleCalendar",
+  "linkAgendamentoInteligente":  null,
+  "emailGoogleCalendar": "Davikh@gmail.com",
+  "modulosIA": {
+    "sugestaoProdutos": true,
+    "promoAuto": true,
+    "resumoPedido": true,
+    "respostaLink": true
+  },
+  "profissionais": [
+    {
+      "nome": "Marina Lopes",
+      "especializacao": "Estética facial e corporal",
+      "experiencia": "6 anos de experiência",
+      "descricao": "Especialista em tratamentos naturais para realce da beleza"
+    }
+  ]
+}

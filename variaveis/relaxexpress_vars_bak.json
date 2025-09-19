@@ -1,0 +1,59 @@
+{
+  "__meta": {
+    "version": 2,
+    "stats": {
+      "writes": 9,
+      "prunes": 0,
+      "expirations": 1
+    },
+    "lastWrite": "2025-08-19T12:51:02.533Z"
+  },
+  "ultimaIntencaoDetectada": {
+    "valor": "intencao_agendar",
+    "criado_em": "2025-08-19T12:51:02.523Z",
+    "expira_em": "2025-08-21T12:51:02.523Z"
+  },
+  "agendamento.data": {
+    "valor": "N/D",
+    "criado_em": "2025-08-19T12:51:02.508Z",
+    "expira_em": "2025-08-21T12:51:02.508Z"
+  },
+  "agendamento.horario": {
+    "valor": "N/D",
+    "criado_em": "2025-08-19T12:51:02.510Z",
+    "expira_em": "2025-08-21T12:51:02.510Z"
+  },
+  "agendamento.regiao": {
+    "valor": "N/D",
+    "criado_em": "2025-08-19T12:51:02.514Z",
+    "expira_em": "2025-08-21T12:51:02.514Z"
+  },
+  "ultimoItemSelecionado": {
+    "valor": {
+      "item": {
+        "nome": "agendar",
+        "origem": "texto"
+      },
+      "origem": "contextRouter",
+      "atualizado_em": "2025-08-19T12:51:02.525Z"
+    },
+    "criado_em": "2025-08-19T12:51:02.526Z",
+    "expira_em": "2025-08-21T12:51:02.526Z"
+  },
+  "ultimoPedidoAgendamento": {
+    "valor": {
+      "data": null,
+      "hora": null,
+      "regiao": null,
+      "origem": "contextRouter",
+      "atualizado_em": "2025-08-19T12:51:02.528Z"
+    },
+    "criado_em": "2025-08-19T12:51:02.529Z",
+    "expira_em": "2025-08-21T12:51:02.529Z"
+  },
+  "etapaFunilAtual": {
+    "valor": "intencao_agendar",
+    "criado_em": "2025-08-19T12:51:02.533Z",
+    "expira_em": "2025-08-21T12:51:02.533Z"
+  }
+}

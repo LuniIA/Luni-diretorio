@@ -1,0 +1,131 @@
+📋 Instruções de Onboarding Luni v1.5 (Para preenchimento manual ou via formulário/IA)
+Cada cliente deve ter um arquivo .json único com essas informações preenchidas corretamente.
+Campos obrigatórios devem sempre estar presentes, mesmo se vazios.
+
+🧩 1. Identificação do Cliente
+nome: Nome comercial do cliente
+
+nomeArquivo: Nome do arquivo (slug sem espaços, usado para salvar .json)
+
+plano: "basico", "pro" ou "enterprise" (define limites de tokens e recursos)
+
+segmento: Área de atuação (ex: moda, estética, pet, alimentação)
+
+subSegmento: Descrição mais específica (ex: loja online de roupas femininas)
+
+🛍️ 2. Negócio e Produtos/Serviços
+produto: O que o negócio oferece (resumo)
+
+tipoNegocio: "Online", "Físico", "Ambos" ou "Serviço móvel"
+
+atendimentoLocal: Se atende presencialmente ou vai até o cliente
+
+canaisAtendimento: ["WhatsApp", "Instagram", "Telefone", ...]
+
+tempoMercado: Tempo de atuação (ex: "2 anos")
+
+produtosServicos: Lista com nome, preco, cores, tamanhos, quantidade, e descricao opcional
+
+servicosComPrecoFixo: Lista textual com nome e valor (se aplicável)
+
+exibirPrecosBot: "Sim" ou "Não"
+
+🎯 3. Vendas e Promoções
+diferencial: O que torna o negócio único
+
+focoVendas: Objetivo atual (ex: vender mais, agendar, automatizar)
+
+promocoes: Promoções ativas
+
+intensidadeVendas: 1 (informativo), 2 (consultivo), 3 (ativo)
+
+estrategiaVendas: Lista com até 3 estratégias (ex: urgência, confiança, exclusividade)
+
+frasesSugestivas: Frases que a IA pode usar em vendas
+
+tonsPreferidos: Lista de tons desejados (ex: empático, divertido, direto)
+
+👥 4. Público e Estilo de Atendimento
+publicoAlvo: Quem o negócio atende
+
+principaisDuvidas: Perguntas frequentes
+
+dorCliente: Problema que o negócio resolve
+
+linguagem: Estilo textual (ex: formal, divertida, acolhedora)
+
+respostasDetalhadas: "Curta", "Média", "Longa" (ou variações)
+
+frasePadrao: Saudação padrão da IA
+
+emojis: "Sim" ou "Não"
+
+usarNomeNegocio: true/false
+
+nomeBot: Nome da assistente (ex: Luni, Bela Virtual)
+
+apresentacaoBot: {
+  "template": "barbearia", // ou "estetica_facial_corporal", "moda_feminina", "servicos_tecnologicos", etc.
+  "nomeBot": "ImperialBot", // Nome da IA para apresentação
+  "cargoBot": "atendente", // Cargo/função (atendente, especialista, técnico, consultora, etc.)
+  "customizada": null // Apresentação personalizada (opcional) - use {nomeBot}, {cargoBot}, {empresa}
+}
+
+temasSensiveis: Palavras/temas a evitar (ex: aparência, peso, atraso)
+
+termosProibidos: Termos que o bot não deve usar (ex: "problema", "esperar")
+
+📆 5. Atendimento e Agendamento
+funcionamento: Dias e horários
+
+pausas: Intervalos (almoço, etc)
+
+respondeForaHorario: true/false
+
+tipoAgendamento: "manual", "googleCalendar" ou "linkInteligente"
+
+emailGoogleCalendar: (somente para clientes com Google Calendar)
+
+linkAgendamentoInteligente: (somente para clientes com link externo)
+
+perguntarNomeCliente: true/false
+
+coletarContato: true/false
+
+infoEspecificaInicio: O que a IA deve perguntar para iniciar (ex: tamanho, bairro, horário)
+
+🔧 6. Personalização e IA
+objetivoBot: Objetivo funcional do bot
+
+metaPersonalizada: Frase que resume o que o cliente espera da IA
+
+personalizacaoExtra: Detalhes adicionais para o comportamento da IA
+
+modulosIA: {
+  "sugestaoProdutos": true,
+  "promoAuto": true,
+  "resumoPedido": true,
+  "respostaLink": true
+}
+
+💼 7. Profissionais (se houver)
+profissionais: Lista com nome, especialização, experiência e descrição
+
+🧠 8. Histórico e Feedback
+jaUsouOutroBot: "Sim" ou "Não"
+
+receberMelhorias: Onde prefere receber sugestões (ex: WhatsApp, e-mail)
+
+observacoes: Qualquer ponto importante para a IA saber
+
+referencias: Empresas ou bots que o cliente admira
+
+prontoParaConfigurar: true/false
+
+📊 9. Estrutura de Planos
+plano: Define os limites de recursos do cliente:
+- "basico": 2.5k tokens entrada, 600 tokens saída (conversas simples)
+- "pro": 4k tokens entrada, 800 tokens saída (vendas consultivas)  
+- "enterprise": 6k tokens entrada, 1000 tokens saída (negociações complexas)
+
+Se quiser, posso gerar essa estrutura como um arquivo .txt ou .md para manter na pasta /clientes. Deseja isso?

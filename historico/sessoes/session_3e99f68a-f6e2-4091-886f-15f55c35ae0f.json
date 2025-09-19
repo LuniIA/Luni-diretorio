@@ -1,0 +1,36 @@
+{
+  "id": "3e99f68a-f6e2-4091-886f-15f55c35ae0f",
+  "clienteId": "barbeariaimperial",
+  "createdAt": 1758235566422,
+  "lastActivity": 1758236598874,
+  "metadata": {
+    "focoAtual": {
+      "duvidasRecentes": [
+        "[midia]"
+      ],
+      "intencaoAtual": "intencao de agendamento",
+      "agendamento": [
+        {
+          "servicoRelacionado": "N/D",
+          "data": "N/D",
+          "horario": "N/D",
+          "regiao": "N/D",
+          "confirmado": false,
+          "ultimaInteracao": "2025-09-18T23:03:16.832Z"
+        }
+      ]
+    },
+    "etapaFunil": "descoberta",
+    "primeiraInteracao": true
+  },
+  "context": {
+    "messages": [],
+    "variables": {},
+    "tags": [],
+    "ultimaInteracaoTimestamp": 1758236598874
+  },
+  "stats": {
+    "messageCount": 0,
+    "totalTime": 0
+  }
+}

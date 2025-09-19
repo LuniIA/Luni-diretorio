@@ -1,0 +1,52 @@
+{
+  "focos": {
+    "produto": [
+      {
+        "nome": "blusa ciganinha branca",
+        "apelidos": ["blusa branca", "ciganinha"],
+        "tamanhosMencionados": ["P"],
+        "coresMencionadas": ["branca"],
+        "intencao": "interesse",
+        "ultimaMencao": "2025-05-08T02:24:29.847Z"
+      }
+    ],
+    "servico": [
+      {
+        "nome": "drenagem linfática",
+        "pacote": "5 sessões",
+        "intencao": "agendar",
+        "ultimaMencao": "2025-05-08T01:40:12.562Z"
+      }
+    ],
+    "agendamento": [
+      {
+        "data": "2025-05-10",
+        "horario": "16:00",
+        "servicoRelacionado": "massagem relaxante",
+        "confirmado": false,
+        "ultimaInteracao": "2025-05-08T01:42:00.998Z"
+      }
+    ],
+    "contatoCliente": {
+      "nome": "Davi Hoffmann",
+      "telefone": "47989229426",
+      "coletadoVia": "mensagem",
+      "horaCaptura": "2025-05-08T01:43:58.000Z"
+    },
+    "duvidasRecentes": [
+      "Vocês fazem troca?",
+      "Tem essa peça no tamanho M?",
+      "Qual valor da limpeza de pele?"
+    ],
+    "linksRecebidos": [
+      {
+        "url": "https://www.instagram.com/p/XYZ123",
+        "interpretacao": "referência de vestido longo",
+        "hora": "2025-05-08T02:12:14.112Z"
+      }
+    ],
+    "intencaoAtual": "comprar produto",
+    "ultimoFluxo": "produto",
+    "timestampUltimaAtualizacao": "2025-05-08T02:25:00.000Z"
+  }
+}

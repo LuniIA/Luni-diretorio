@@ -1,0 +1,63 @@
+{
+  "focos": {
+    "duvidasRecentes": [
+      "Oi, tem horário hoje?",
+      "Tem horário amanhã às 15h?",
+      "Oi, quanto custa o corte?",
+      "Quero saber precos",
+      "[midia]"
+    ],
+    "intencaoAtual": "intencao de agendamento",
+    "produto": [],
+    "itemIndefinido": [
+      {
+        "nomeMencionado": "oi quero cortar cabelo",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "oi quero cortar cabelo",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-09-18T20:48:47.170Z"
+      },
+      {
+        "nomeMencionado": "Oi, tem horário hoje?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Oi, tem horário hoje?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-09-18T22:39:15.074Z"
+      },
+      {
+        "nomeMencionado": "Tem horário amanhã às 15h?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Tem horário amanhã às 15h?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-09-18T22:48:32.817Z"
+      },
+      {
+        "nomeMencionado": "Quero saber precos",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Quero saber precos",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-09-18T23:03:04.659Z"
+      }
+    ],
+    "agendamento": [
+      {
+        "data": "N/D",
+        "hora": null,
+        "regiao": "N/D",
+        "confirmado": false,
+        "ultimaInteracao": "2025-09-18T23:03:16.832Z"
+      }
+    ],
+    "contatoCliente": {
+      "telefone": "47999999999"
+    },
+    "servico": [
+      {
+        "nome": "Corte",
+        "intencao": "agendar",
+        "ultimaMencao": "2025-09-18T22:56:12.727Z"
+      }
+    ]
+  },
+  "atualizado_em": "2025-09-18T23:03:18.873Z"
+}

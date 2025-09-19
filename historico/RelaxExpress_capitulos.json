@@ -1,0 +1,45 @@
+{
+  "capituloAtual": "intencao_agendar_intencao de agendamento",
+  "dataInicio": "2025-08-19T12:51:02.503Z",
+  "dataAtualizado": "2025-08-19T12:51:02.503Z",
+  "tagsRelacionadas": [
+    "intencao_agendar",
+    "conversa_geral",
+    "intencao de agendamento"
+  ],
+  "motivo": "",
+  "intencao": "agendar",
+  "item": null,
+  "slots": {
+    "data": null,
+    "hora": null,
+    "regiao": null,
+    "quantidade": null,
+    "acao": null,
+    "item": null
+  },
+  "funil": null,
+  "origemMensagem": null,
+  "usuario": null,
+  "timeline": [
+    {
+      "ts": "2025-08-19T12:49:30.437Z",
+      "tags": [
+        "conversa_geral"
+      ],
+      "slots": null,
+      "intencao": null,
+      "item": null
+    },
+    {
+      "ts": "2025-08-19T12:51:02.503Z",
+      "tags": [
+        "intencao_agendar",
+        "intencao de agendamento"
+      ],
+      "slots": null,
+      "intencao": "agendar",
+      "item": null
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - run: npm ci
+      - name: Smoke test
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY || 'test' }}
+        run: |
+          node -e "import('./clienteLoader.js').then(({carregarCliente})=>import('./core/app.js').then(async (m)=>{ const c=carregarCliente('barbeariaimperial'); const r=await m.processaMensagem('Olá! preço da barba?', c, true, 'tarde', 'texto', null, {sessionId:'ci',clienteId:'barbeariaimperial'}); console.log(r && r.resposta ? 'ok' : 'fail'); process.exit(r&&r.resposta?0:1); }))"
+
+

@@ -1,0 +1,97 @@
+{
+  "nome": "RelaxExpress",
+  "segmento": "bemestar-massoterapia",
+  "subSegmento": "massagem em domicílio",
+  "plano": "basico",
+  "produto": "Massagem relaxante e terapêutica no conforto da sua casa",
+  "tipoNegocio": "Serviço móvel",
+  "atendimentoLocal": "Não, atendimento somente a domicílio",
+  "canaisAtendimento": ["WhatsApp"],
+  "tempoMercado": "1 ano",
+  "publicoAlvo": "Adultos entre 30 e 60 anos que buscam alívio do estresse sem sair de casa",
+  "principaisDuvidas": [
+    "Você atende no meu bairro?",
+    "Quais tipos de massagem você faz?",
+    "Tem horário para hoje?",
+    "Leva maca ou precisa de estrutura?",
+    "Como funciona o pagamento?"
+  ],
+  "dorCliente": "Estresse, dores musculares e falta de tempo para ir até um spa ou clínica",
+  "produtosServicos": [
+    {
+      "nome": "Massagem relaxante",
+      "descricao": "Alívio do estresse com óleos essenciais e música ambiente",
+      "preco": 130.0,
+      "tamanhos": [],
+      "cores": [],
+      "quantidade": 999
+    },
+    {
+      "nome": "Massagem terapêutica",
+      "descricao": "Tratamento de dores localizadas com técnicas de liberação miofascial",
+      "preco": 150.0,
+      "tamanhos": [],
+      "cores": [],
+      "quantidade": 999
+    }
+  ],
+  "servicosComPrecoFixo": ["Pacote 3 sessões relaxante: R$360"],
+  "exibirPrecosBot": "Sim",
+  "diferencial": "Atendimento a domicílio com qualidade de spa",
+  "focoVendas": "Agendar sessões recorrentes e destacar comodidade",
+  "promocoes": "1ª sessão com 10% de desconto para novos clientes",
+  "funcionamento": "Todos os dias, das 8h às 21h",
+  "respondeForaHorario": true,
+  "pausas": "Pausa flexível entre atendimentos",
+  "linguagem": "Calma e acolhedora",
+  "emojis": "Sim",
+  "respostasDetalhadas": "Leves e empáticas, com foco em bem-estar",
+  "frasePadrao": "Olá! 🌿 Aqui é da RelaxExpress. Vamos cuidar de você com carinho hoje?",
+  "perguntarNomeCliente": true,
+  "coletarContato": true,
+  "infoEspecificaInicio": "Bairro, tipo de massagem desejada e melhor horário",
+  "usarNomeNegocio": true,
+  "nomeBot": "Luni Zen",
+  "termosProibidos": ["dor", "pressão", "urgência"],
+  "temasSensiveis": ["corpo", "toque", "ansiedade"],
+  "objetivoBot": "Agendar sessões no domicílio com uma abordagem acolhedora",
+  "metaPersonalizada": "Cuidar da saúde física e emocional dos clientes no espaço onde se sentem mais seguros",
+  "intensidadeVendas": 1,
+  "estrategiaVendas": ["cuidado", "confiança", "conveniência"],
+  "tonsPreferidos": ["tranquilo", "profissional", "gentil"],
+  "frasesSugestivas": [
+    "Que tal reservar um momento só seu hoje? 🌼",
+    "Posso agendar agora e levar todo o cuidado até você 💆‍♀️"
+  ],
+  "linkProdutos": null,
+  "jaUsouOutroBot": "Não",
+  "receberMelhorias": "WhatsApp",
+  "observacoes": "Evitar soar invasivo. Cliente geralmente quer relaxar e não conversar muito.",
+  "referencias": ["Spa Móvel Zen", "Massagem em Casa"],
+  "personalizacaoExtra": "Oferecer mensagens suaves e convidativas como um spa falaria",
+  "prontoParaConfigurar": "Sim",
+  "nomeArquivo": "relaxexpress",
+  "apresentacaoBot": {
+    "template": "bemestar_massoterapia",
+    "nomeBot": "RelaxBot",
+    "cargoBot": "terapeuta",
+    "customizada": null
+  },
+  "tipoAgendamento": "manual",
+  "linkAgendamentoInteligente":  null,
+  "modulosIA": {
+    "sugestaoProdutos": true,
+    "promoAuto": true,
+    "resumoPedido": false,
+    "respostaLink": true
+  },
+  "profissionais": [
+    {
+      "nome": "Elisa Moraes",
+      "especializacao": "Terapias corporais e relaxamento",
+      "experiencia": "4 anos de experiência",
+      "descricao": "Profissional com formação em massoterapia, especializada em atendimento humanizado."
+    }
+  ]
+}
+

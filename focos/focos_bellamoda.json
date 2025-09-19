@@ -1,0 +1,80 @@
+{
+  "focos": {
+    "duvidasRecentes": [
+      "Oi, eu queria ver a calça jeans de novo"
+    ],
+    "intencaoAtual": null,
+    "itemIndefinido": [
+      {
+        "nomeMencionado": "quen roupas voces tem",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "quen roupas voces tem",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:18:45.270Z"
+      },
+      {
+        "nomeMencionado": "quero um jeans cintura alta",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "quero um jeans cintura alta",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:19:13.247Z"
+      },
+      {
+        "nomeMencionado": "quero no tamanho 38 quanto custa",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "quero no tamanho 38 quanto custa",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:19:27.595Z"
+      },
+      {
+        "nomeMencionado": "Que roupas vocês têm?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Que roupas vocês têm?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:44:13.145Z"
+      },
+      {
+        "nomeMencionado": "Quero um jeans cintura alta",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Quero um jeans cintura alta",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:44:24.655Z"
+      },
+      {
+        "nomeMencionado": "é o shorts quero numero 42 azul",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "é o shorts quero numero 42 azul",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:45:13.343Z"
+      },
+      {
+        "nomeMencionado": "quero pagar",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "quero pagar",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:45:31.480Z"
+      },
+      {
+        "nomeMencionado": "quero a caçma que falei",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "quero a caçma que falei",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:46:20.032Z"
+      },
+      {
+        "nomeMencionado": "quero aenas item 3 e 5",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "quero aenas item 3 e 5",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:48:11.807Z"
+      },
+      {
+        "nomeMencionado": "Vocês têm saia longa vermelha?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Vocês têm saia longa vermelha?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-07-02T15:48:24.253Z"
+      }
+    ]
+  }
+}

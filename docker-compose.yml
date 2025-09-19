@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - USE_REDIS=${USE_REDIS:-0}
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=info
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
+
+

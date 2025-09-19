@@ -1,0 +1,42 @@
+# Arquivos que não precisam estar no contexto do Cursor
+# (para economizar tokens e melhorar performance)
+
+# Histórico de conversas (muito volumoso)
+historico/
+historico/sessoes/
+historico/*.log
+historico/*.txt
+
+# Variáveis de sessão (dados temporários)
+variaveis/
+variaveis/*.json
+
+# Tokens de autenticação (sensíveis)
+tokens/
+tokens/*.json
+
+# Logs do sistema (muito volumoso)
+logs/
+logs/*.log
+
+# Arquivos de agendamento (dados operacionais)
+agendamentos/
+agendamentos/*.txt
+
+# Arquivos de backup
+*_bak.json
+*_backup.*
+
+# Arquivos temporários
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração local
+.env.local
+.env.production
+
+# Arquivos de auditoria e template
+auditoria_luni_template.csv
+

@@ -1,0 +1,62 @@
+{
+  "focos": {
+    "duvidasRecentes": [
+      "Se eu precisar remarcar depois, posso falar por aqui?"
+    ],
+    "intencaoAtual": "intencao de agendamento",
+    "itemIndefinido": [
+      {
+        "nomeMencionado": "Olá! Fazem limpeza de pele com extração?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Olá! Fazem limpeza de pele com extração?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T14:02:59.895Z"
+      },
+      {
+        "nomeMencionado": "Vocês têm horário na sexta de manhã?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Vocês têm horário na sexta de manhã?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T14:22:53.059Z"
+      },
+      {
+        "nomeMencionado": "Quero confirmar uma sessão pra sexta às 10h\"",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Quero confirmar uma sessão pra sexta às 10h\"",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T14:23:04.945Z"
+      },
+      {
+        "nomeMencionado": "\"Tem alguma promoção rolando essa semana?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "\"Tem alguma promoção rolando essa semana?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T14:23:46.509Z"
+      },
+      {
+        "nomeMencionado": "Como é o protocolo que vocês usam pra pele oleosa?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Como é o protocolo que vocês usam pra pele oleosa?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T14:23:52.726Z"
+      }
+    ],
+    "servico": [
+      {
+        "nome": "limpeza de pele",
+        "intencao": "agendar",
+        "ultimaMencao": "2025-06-04T14:22:33.078Z"
+      }
+    ],
+    "agendamento": [
+      {
+        "ultimaInteracao": "2025-06-04T14:22:53.059Z",
+        "confirmado": false
+      },
+      {
+        "ultimaInteracao": "2025-06-04T14:23:58.340Z",
+        "confirmado": false
+      }
+    ]
+  }
+}

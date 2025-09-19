@@ -1,0 +1,194 @@
+{
+  "capituloAtual": "intencao de agendamento",
+  "dataInicio": "2025-09-18T23:03:16.837Z",
+  "dataAtualizado": "2025-09-18T23:03:16.837Z",
+  "tagsRelacionadas": [
+    "conversa_geral",
+    "intencao de agendamento",
+    "pergunta_preco",
+    "agendar servico",
+    "intencao_agendar"
+  ],
+  "motivo": "",
+  "intencao": "informar_preco",
+  "item": {
+    "nome": "Corte"
+  },
+  "slots": {
+    "data": null,
+    "hora": null,
+    "regiao": null,
+    "quantidade": null,
+    "acao": null,
+    "item": null
+  },
+  "funil": null,
+  "origemMensagem": null,
+  "usuario": null,
+  "timeline": [
+    {
+      "ts": "2025-08-17T16:46:43.947Z",
+      "tags": [
+        "conversa_geral"
+      ],
+      "slots": null,
+      "intencao": null,
+      "item": null
+    },
+    {
+      "ts": "2025-08-18T00:53:24.564Z",
+      "tags": [
+        "intencao de agendamento"
+      ],
+      "slots": null,
+      "intencao": null,
+      "item": null
+    },
+    {
+      "ts": "2025-08-18T00:53:28.048Z",
+      "tags": [
+        "pergunta_preco",
+        "agendar servico"
+      ],
+      "slots": null,
+      "intencao": "informar_preco",
+      "item": {
+        "nome": "Corte"
+      }
+    },
+    {
+      "ts": "2025-08-19T01:24:06.030Z",
+      "tags": [
+        "conversa_geral"
+      ],
+      "slots": null,
+      "intencao": null,
+      "item": null
+    },
+    {
+      "ts": "2025-08-19T12:58:01.250Z",
+      "tags": [
+        "pergunta_preco",
+        "agendar servico"
+      ],
+      "slots": null,
+      "intencao": "informar_preco",
+      "item": {
+        "nome": "Corte"
+      }
+    },
+    {
+      "ts": "2025-08-19T12:58:03.838Z",
+      "tags": [
+        "intencao_agendar",
+        "intencao de agendamento"
+      ],
+      "slots": null,
+      "intencao": "agendar",
+      "item": null
+    },
+    {
+      "ts": "2025-08-19T13:10:25.504Z",
+      "tags": [
+        "pergunta_preco",
+        "agendar servico"
+      ],
+      "slots": null,
+      "intencao": "informar_preco",
+      "item": {
+        "nome": "Corte"
+      }
+    },
+    {
+      "ts": "2025-08-19T13:10:35.094Z",
+      "tags": [
+        "intencao_agendar",
+        "intencao de agendamento"
+      ],
+      "slots": null,
+      "intencao": "agendar",
+      "item": null
+    },
+    {
+      "ts": "2025-08-19T13:10:41.639Z",
+      "tags": [
+        "agendar servico"
+      ],
+      "slots": null,
+      "intencao": null,
+      "item": {
+        "nome": "Corte"
+      }
+    },
+    {
+      "ts": "2025-08-19T13:10:53.284Z",
+      "tags": [
+        "intencao_agendar",
+        "intencao de agendamento"
+      ],
+      "slots": null,
+      "intencao": "agendar",
+      "item": null
+    },
+    {
+      "ts": "2025-09-18T20:48:47.183Z",
+      "tags": [
+        "conversa_geral"
+      ],
+      "slots": null,
+      "intencao": null,
+      "item": null
+    },
+    {
+      "ts": "2025-09-18T22:39:15.089Z",
+      "tags": [
+        "intencao_agendar",
+        "intencao de agendamento"
+      ],
+      "slots": null,
+      "intencao": "agendar",
+      "item": null
+    },
+    {
+      "ts": "2025-09-18T22:46:06.436Z",
+      "tags": [
+        "intencao_agendar",
+        "intencao de agendamento"
+      ],
+      "slots": null,
+      "intencao": "agendar",
+      "item": null
+    },
+    {
+      "ts": "2025-09-18T22:48:32.825Z",
+      "tags": [
+        "intencao_agendar",
+        "intencao de agendamento"
+      ],
+      "slots": null,
+      "intencao": "agendar",
+      "item": null
+    },
+    {
+      "ts": "2025-09-18T22:56:12.738Z",
+      "tags": [
+        "pergunta_preco",
+        "agendar servico"
+      ],
+      "slots": null,
+      "intencao": "informar_preco",
+      "item": {
+        "nome": "Corte"
+      }
+    },
+    {
+      "ts": "2025-09-18T23:03:16.839Z",
+      "tags": [
+        "intencao de agendamento"
+      ],
+      "slots": null,
+      "intencao": null,
+      "item": null
+    }
+  ]
+}

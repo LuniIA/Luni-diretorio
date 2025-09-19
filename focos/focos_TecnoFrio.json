@@ -1,0 +1,106 @@
+{
+  "focos": {
+    "duvidasRecentes": [
+      "Obrigado! Depois de agendar preciso falar com alguém ou tá confirmado?"
+    ],
+    "intencaoAtual": "intencao de agendamento",
+    "agendamento": [
+      {
+        "ultimaInteracao": "2025-06-04T13:44:47.551Z",
+        "confirmado": false
+      },
+      {
+        "ultimaInteracao": "2025-06-04T13:53:28.970Z",
+        "confirmado": false
+      },
+      {
+        "ultimaInteracao": "2025-06-04T13:54:25.522Z",
+        "confirmado": false
+      },
+      {
+        "ultimaInteracao": "2025-06-04T13:58:13.007Z",
+        "confirmado": false
+      },
+      {
+        "ultimaInteracao": "2025-06-04T13:58:53.558Z",
+        "confirmado": false
+      },
+      {
+        "ultimaInteracao": "2025-06-04T13:59:24.863Z",
+        "confirmado": false
+      }
+    ],
+    "itemIndefinido": [
+      {
+        "nomeMencionado": "Quais serviços vocês oferecem?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Quais serviços vocês oferecem?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:52:57.894Z"
+      },
+      {
+        "nomeMencionado": "Vocês fazem manutenção de ar-condicionado split?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Vocês fazem manutenção de ar-condicionado split?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:53:09.571Z"
+      },
+      {
+        "nomeMencionado": "Tem horário pra amanhã?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Tem horário pra amanhã?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:53:28.970Z"
+      },
+      {
+        "nomeMencionado": "qual serviços vs tem",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "qual serviços vs tem",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:53:44.046Z"
+      },
+      {
+        "nomeMencionado": "Quero agendar para terça às 14h",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Quero agendar para terça às 14h",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:54:25.522Z"
+      },
+      {
+        "nomeMencionado": "Olá, vocês consertam ar-condicionado split da Samsung?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Olá, vocês consertam ar-condicionado split da Samsung?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:57:42.937Z"
+      },
+      {
+        "nomeMencionado": "\"Tem atendimento hoje à tarde?\" ← intenção leve de agendamento",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "\"Tem atendimento hoje à tarde?\" ← intenção leve de agendamento",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:57:56.955Z"
+      },
+      {
+        "nomeMencionado": "Quero agendar uma visita pro meu ar-condicionado\"",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Quero agendar uma visita pro meu ar-condicionado\"",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:58:13.007Z"
+      },
+      {
+        "nomeMencionado": "Que diferença tem na limpeza simples e completa?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Que diferença tem na limpeza simples e completa?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:59:11.668Z"
+      },
+      {
+        "nomeMencionado": "Vi que vocês dão garantia, como funciona?",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "Vi que vocês dão garantia, como funciona?",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-06-04T13:59:16.594Z"
+      }
+    ]
+  }
+}

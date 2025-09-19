@@ -1,0 +1,69 @@
+{
+  "__meta": {
+    "version": 2,
+    "stats": {
+      "writes": 73,
+      "prunes": 0,
+      "expirations": 8
+    },
+    "lastWrite": "2025-09-18T23:03:16.847Z"
+  },
+  "ultimoItemSelecionado": {
+    "valor": {
+      "item": {
+        "nome": "saber precos",
+        "origem": "texto"
+      },
+      "origem": "contextRouter",
+      "atualizado_em": "2025-09-18T23:03:04.672Z"
+    },
+    "criado_em": "2025-09-18T23:03:04.673Z",
+    "expira_em": "2025-09-20T23:03:04.673Z"
+  },
+  "ultimaIntencaoDetectada": {
+    "valor": "intencao de agendamento",
+    "criado_em": "2025-09-18T23:03:16.840Z",
+    "expira_em": "2025-09-19T00:03:16.840Z"
+  },
+  "agendamento.data": {
+    "valor": "N/D",
+    "criado_em": "2025-09-18T23:03:16.844Z",
+    "expira_em": "2025-09-20T23:03:16.844Z"
+  },
+  "agendamento.horario": {
+    "valor": "N/D",
+    "criado_em": "2025-09-18T23:03:16.847Z",
+    "expira_em": "2025-09-20T23:03:16.847Z"
+  },
+  "agendamento.regiao": {
+    "valor": "N/D",
+    "criado_em": "2025-09-18T22:48:32.840Z",
+    "expira_em": "2025-09-20T22:48:32.840Z"
+  },
+  "ultimoPedidoAgendamento": {
+    "valor": {
+      "data": {
+        "tipo": "relative",
+        "texto": "amanha"
+      },
+      "hora": {
+        "texto": "15h"
+      },
+      "regiao": null,
+      "origem": "contextRouter",
+      "atualizado_em": "2025-09-18T22:48:32.853Z"
+    },
+    "criado_em": "2025-09-18T22:48:32.853Z",
+    "expira_em": "2025-09-20T22:48:32.853Z"
+  },
+  "etapaFunilAtual": {
+    "valor": "intencao_agendar",
+    "criado_em": "2025-09-18T22:39:15.123Z",
+    "expira_em": "2025-09-20T22:39:15.123Z"
+  },
+  "servicoEmFoco": {
+    "valor": "Corte",
+    "criado_em": "2025-09-18T22:56:12.745Z",
+    "expira_em": "2025-09-20T22:56:12.745Z"
+  }
+}

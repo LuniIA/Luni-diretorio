@@ -1,0 +1,50 @@
+{
+  "focos": {
+    "duvidasRecentes": [
+      "pode agendar",
+      "ola",
+      "que serviços voces tem",
+      "quero agendar",
+      "quero sair"
+    ],
+    "intencaoAtual": null,
+    "produto": [],
+    "itemIndefinido": [
+      {
+        "nomeMencionado": "que serviços voces tem",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "que serviços voces tem",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-08-19T12:50:27.681Z"
+      },
+      {
+        "nomeMencionado": "quero agendar",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "quero agendar",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-08-19T12:51:02.499Z"
+      },
+      {
+        "nomeMencionado": "quero sair",
+        "tipo": "desconhecido",
+        "mensagemOriginal": "quero sair",
+        "intencaoProvavel": "possível interesse",
+        "ultimaMencao": "2025-08-19T12:55:52.090Z"
+      }
+    ],
+    "agendamento": [
+      {
+        "data": "N/D",
+        "hora": null,
+        "regiao": "N/D",
+        "confirmado": false,
+        "ultimaInteracao": "2025-08-19T12:51:02.499Z"
+      }
+    ],
+    "contatoCliente": {
+      "nome": "davi",
+      "telefone": null
+    }
+  },
+  "atualizado_em": "2025-08-19T12:55:52.091Z"
+}
