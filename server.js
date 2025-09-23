@@ -235,9 +235,16 @@ app.post('/webhook', async (req, res) => {
       isAudio: !!NumMedia
     });
 
-    // Retornar resposta para Twilio
-    res.set('Content-Type', 'text/plain');
-    res.send(resposta);
+    // Retornar resposta no formato TwiML para que o Twilio envie a mensagem
+    const escapeXml = (s) => String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&apos;');
+    const twiml = `<?xml version="1.0" encoding="UTF-8"?><Response><Message>${escapeXml(resposta)}</Message></Response>`;
+    res.type('text/xml');
+    res.send(twiml);
 
     if (MessageSid) processedMessages.add(MessageSid);
 
