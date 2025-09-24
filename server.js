@@ -24,6 +24,9 @@ try {
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Render/Proxies: confiar no header X-Forwarded-* para IP correto/rate limit
+app.set('trust proxy', 1);
+
 // Cache para evitar processamento duplicado de mensagens
 const processedMessages = new Set();
 
@@ -122,6 +125,24 @@ app.post('/test-webhook', (req, res) => {
   }
 });
 
+// Backup manual (protegido por chave simples)
+app.post('/backup/manual', async (req, res) => {
+  try {
+    const apiKey = process.env.BACKUP_API_KEY || '';
+    const provided = req.headers['x-backup-key'] || req.query.key || '';
+    if (!apiKey || String(provided) !== String(apiKey)) {
+      return res.status(401).json({ error: 'unauthorized' });
+    }
+    const { default: child_process } = await import('node:child_process');
+    const { promisify } = await import('node:util');
+    const exec = promisify(child_process.exec);
+    const { stdout } = await exec('node scripts/backup.js');
+    res.json({ success: true, result: JSON.parse(stdout) });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Endpoint para gerenciar mapeamento de clientes
 app.get('/clients', async (req, res) => {
   try {
@@ -167,12 +188,25 @@ app.post('/webhook', async (req, res) => {
   try {
     const { Body, From, To, MessageSid, NumMedia, MediaContentType0, MediaUrl0 } = req.body;
     
+    // Validação de assinatura Twilio (opcional via env)
+    if (process.env.TWILIO_VALIDATE === '1') {
+      try {
+        if (twilioManager && !twilioManager.validarWebhook(req)) {
+          logger.warn('Assinatura Twilio inválida');
+          return res.status(403).send('Invalid signature');
+        }
+      } catch (e) {
+        logger.warn('Falha ao validar assinatura Twilio', { err: e.message });
+        // prossegue para não interromper em staging
+      }
+    }
+
     logger.info('Webhook recebido', { 
       Body, From, To, MessageSid, NumMedia, MediaContentType0, MediaUrl0,
       body: req.body 
     });
     
-    if (!Body && !NumMedia) {
+    if (!Body && Number(NumMedia) === 0) {
       logger.warn('Webhook inválido recebido', { body: req.body });
       return res.status(400).send('Dados inválidos');
     }
@@ -213,7 +247,7 @@ app.post('/webhook', async (req, res) => {
     const periodoDia = detectarPeriodoDia();
 
     const sessao = await storeAdapter.getOrInitSessao(cliente.nomeArquivo || clienteId);
-    const { resposta, focoAtualizado } = await processaMensagem(
+    let { resposta, focoAtualizado } = await processaMensagem(
       mensagemTexto || '[midia]',
       cliente,
       sessao.primeiraInteracao,
@@ -232,7 +266,7 @@ app.post('/webhook', async (req, res) => {
       messageSid: MessageSid,
       from: From,
       messageLength: (Body || '').length,
-      isAudio: !!NumMedia
+      isAudio: Number(NumMedia) > 0
     });
 
     // Retornar resposta no formato TwiML para que o Twilio envie a mensagem
@@ -242,7 +276,16 @@ app.post('/webhook', async (req, res) => {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&apos;');
-    const twiml = `<?xml version="1.0" encoding="UTF-8"?><Response><Message>${escapeXml(resposta)}</Message></Response>`;
+    // Reduz e sanitiza para WhatsApp (evitar 63005)
+    const sanitizeForWhatsapp = (text) => String(text)
+      .replace(/\n{3,}/g, '\n\n')
+      .slice(0, 1200);
+    if (process.env.TWILIO_SHORT_REPLY === '1') {
+      resposta = 'Olá! Recebi sua mensagem.';
+    } else {
+      resposta = sanitizeForWhatsapp(resposta);
+    }
+    const twiml = `<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>${escapeXml(resposta)}</Message></Response>`;
     res.type('text/xml');
     res.send(twiml);
 
