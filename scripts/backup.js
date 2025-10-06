@@ -2,6 +2,7 @@ import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
+import archiver from 'archiver';
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 
 function getEnv(name, required = true) {
@@ -29,19 +30,34 @@ async function main() {
 
   const stamp = new Date().toISOString().replace(/[:.]/g, '-');
   const prefix = process.env.BACKUP_PREFIX || 'luni-backup';
-  const name = `${prefix}/${stamp}.txt`;
 
-  // Minimal: subir um arquivo indicador de backup (podemos evoluir para zip)
-  const contents = `Luni backup marker\nHost: ${os.hostname()}\nDate: ${new Date().toISOString()}\n`;
+  // 1) Marker (saúde)
+  const markerKey = `${prefix}/${stamp}.txt`;
+  const marker = `Luni backup marker\nHost: ${os.hostname()}\nDate: ${new Date().toISOString()}\n`;
+  await client.send(new PutObjectCommand({ Bucket: S3_BUCKET, Key: markerKey, Body: marker, ContentType: 'text/plain' }));
 
-  await client.send(new PutObjectCommand({
-    Bucket: S3_BUCKET,
-    Key: name,
-    Body: contents,
-    ContentType: 'text/plain'
-  }));
+  // 2) ZIP completo (historico/, focos/, variaveis/, logs/ se existirem)
+  const zipKey = `${prefix}/${stamp}.zip`;
+  const tmpZip = path.join(os.tmpdir(), `luni-backup-${stamp}.zip`);
+  await new Promise((resolve, reject) => {
+    const output = fs.createWriteStream(tmpZip);
+    const archive = archiver('zip', { zlib: { level: 9 } });
+    output.on('close', resolve);
+    archive.on('error', reject);
+    archive.pipe(output);
+    const addIfExists = (dir) => {
+      if (fs.existsSync(dir)) archive.directory(dir, path.basename(dir));
+    };
+    addIfExists('historico');
+    addIfExists('focos');
+    addIfExists('variaveis');
+    addIfExists('logs');
+    archive.finalize();
+  });
+  const zipBody = fs.createReadStream(tmpZip);
+  await client.send(new PutObjectCommand({ Bucket: S3_BUCKET, Key: zipKey, Body: zipBody, ContentType: 'application/zip' }));
 
-  console.log(JSON.stringify({ ok: true, bucket: S3_BUCKET, key: name }));
+  console.log(JSON.stringify({ ok: true, bucket: S3_BUCKET, marker: markerKey, zip: zipKey }));
 }
 
 main().catch((e) => {
