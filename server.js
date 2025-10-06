@@ -143,6 +143,24 @@ app.post('/backup/manual', async (req, res) => {
   }
 });
 
+// Suporte via GET para teste em navegador (?key=...)
+app.get('/backup/manual', async (req, res) => {
+  try {
+    const apiKey = process.env.BACKUP_API_KEY || '';
+    const provided = req.query.key || '';
+    if (!apiKey || String(provided) !== String(apiKey)) {
+      return res.status(401).json({ error: 'unauthorized' });
+    }
+    const { default: child_process } = await import('node:child_process');
+    const { promisify } = await import('node:util');
+    const exec = promisify(child_process.exec);
+    const { stdout } = await exec('node scripts/backup.js');
+    res.json({ success: true, result: JSON.parse(stdout) });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Endpoint para gerenciar mapeamento de clientes
 app.get('/clients', async (req, res) => {
   try {
