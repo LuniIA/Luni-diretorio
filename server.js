@@ -139,7 +139,7 @@ app.post('/backup/manual', async (req, res) => {
     const { stdout } = await exec('node scripts/backup.js');
     res.json({ success: true, result: JSON.parse(stdout) });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error.message, stderr: error?.stderr || null });
   }
 });
 
@@ -157,7 +157,7 @@ app.get('/backup/manual', async (req, res) => {
     const { stdout } = await exec('node scripts/backup.js');
     res.json({ success: true, result: JSON.parse(stdout) });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error.message, stderr: error?.stderr || null });
   }
 });
 
