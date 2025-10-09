@@ -29,16 +29,21 @@ const CLIENT_MAPPING = {
 export function getClienteByPhone(phoneNumber) {
   // Normalizar número (remover espaços, traços, etc.)
   const normalizedPhone = phoneNumber.replace(/[\s\-\(\)]/g, '');
-  
+
   // Buscar no mapeamento
   const clienteId = CLIENT_MAPPING[normalizedPhone] || CLIENT_MAPPING['default'];
-  
+
   return {
     clienteId,
     phoneNumber: normalizedPhone,
     isMapped: !!CLIENT_MAPPING[normalizedPhone],
     isDefault: !CLIENT_MAPPING[normalizedPhone]
   };
+}
+
+// Função para expor o mapeamento completo (somente para leitura/testes)
+export function getClientMappingSnapshot() {
+  return { ...CLIENT_MAPPING };
 }
 
 // Função para listar todos os clientes disponíveis
@@ -78,5 +83,6 @@ export default {
   listAvailableClients,
   addClientMapping,
   removeClientMapping,
-  getMappingStats
+  getMappingStats,
+  getClientMappingSnapshot
 };
