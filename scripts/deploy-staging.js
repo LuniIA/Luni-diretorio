@@ -102,9 +102,15 @@ async function deployStaging() {
   // 3. Executar testes de integração
   console.log('\n🧪 Executando testes de integração...\n');
   
-  const testResult = runCommand('node test_redis_fase_b.js', 'Testes de integração');
-  if (!testResult) {
-    console.log('❌ Testes falharam. Abortando deploy.');
+  const faseAResult = runCommand('node test_redis_fase_a.js', 'Testes Fase A (fallback e resiliência)');
+  if (!faseAResult) {
+    console.log('❌ Testes da Fase A falharam. Abortando deploy.');
+    return false;
+  }
+
+  const faseBResult = runCommand('node test_redis_fase_b.js', 'Testes Fase B (adapter unificado)');
+  if (!faseBResult) {
+    console.log('❌ Testes da Fase B falharam. Abortando deploy.');
     return false;
   }
 

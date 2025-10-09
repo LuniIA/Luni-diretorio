@@ -39,7 +39,8 @@ config/
 scripts/
 └── setup-redis.js      # Script de setup automático
 
-test_redis_fase_a.js    # Testes unitários
+test_redis_fase_a.js    # Testes de fallback/resiliência do store
+test_redis_fase_b.js    # Testes do adapter unificado
 ```
 
 ## 🚀 Instalação
@@ -70,7 +71,7 @@ cp config/redis.example.env .env
 # Edite .env conforme necessário
 
 # 3. Testar implementação
-node test_redis_fase_a.js
+npm run test:redis
 ```
 
 ## ⚙️ Configuração
@@ -167,8 +168,10 @@ luni:foco:{nomeArquivo}:exp → STRING
 ### Executar Testes
 
 ```bash
-# Testes completos da Fase A
-node test_redis_fase_a.js
+# Testes completos das fases
+npm run test:redis
+
+> 💡 Para validar fases específicas individualmente use `node test_redis_fase_a.js` ou `node test_redis_fase_b.js`.
 
 # Testes específicos
 npm test
@@ -357,7 +360,7 @@ USE_REDIS=0
 
 Para contribuir com a implementação:
 
-1. Execute os testes: `node test_redis_fase_a.js`
+1. Execute os testes: `npm run test:redis`
 2. Verifique compatibilidade com API existente
 3. Teste fallback: `USE_REDIS=0 node index.js`
 4. Documente mudanças
