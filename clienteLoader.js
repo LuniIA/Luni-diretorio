@@ -6,11 +6,30 @@ import path from 'path';
 import { debugLog } from './Utils/debugLog.js'; // ✅ log utilitário centralizado
 
 export function carregarCliente(nomeArquivo) {
-  const caminho = path.resolve('./clientes', `${nomeArquivo}.json`);
+  if (!nomeArquivo || typeof nomeArquivo !== 'string') {
+    console.error(`❌ Nome de arquivo inválido recebido: '${nomeArquivo}'`);
+    debugLog('clienteLoader > nome inválido', { nomeArquivo });
+    return null;
+  }
+
+  const nomeNormalizado = nomeArquivo.trim();
+
+  if (nomeNormalizado.length === 0) {
+    console.error('❌ Nome de arquivo vazio após normalização.');
+    debugLog('clienteLoader > nome vazio', { nomeArquivo });
+    return null;
+  }
+
+  if (nomeNormalizado !== nomeArquivo) {
+    console.warn(`⚠️ Nome de arquivo '${nomeArquivo}' continha espaços extras. Usando '${nomeNormalizado}'.`);
+    debugLog('clienteLoader > nome normalizado', { nomeArquivo, nomeNormalizado });
+  }
+
+  const caminho = path.resolve('./clientes', `${nomeNormalizado}.json`);
 
   if (!fs.existsSync(caminho)) {
-    console.error(`❌ Arquivo do cliente '${nomeArquivo}' não encontrado em ./clientes`);
-    debugLog('clienteLoader > não encontrado', { nomeArquivo });
+    console.error(`❌ Arquivo do cliente '${nomeNormalizado}' não encontrado em ./clientes`);
+    debugLog('clienteLoader > não encontrado', { nomeArquivo: nomeNormalizado });
     return null;
   }
 
@@ -18,7 +37,7 @@ export function carregarCliente(nomeArquivo) {
     const dados = fs.readFileSync(caminho, 'utf-8');
     const cliente = JSON.parse(dados);
 
-    cliente.nomeArquivo = nomeArquivo; // sempre atribui
+    cliente.nomeArquivo = nomeNormalizado; // sempre atribui
 
     // Verificações básicas obrigatórias
     const camposObrigatorios = ['nome', 'segmento', 'intensidadeVendas'];
